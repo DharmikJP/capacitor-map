@@ -1,0 +1,55 @@
+{
+  "api": {
+    "name": "MapboxsdkPlugin",
+    "slug": "mapboxsdkplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "echo",
+        "signature": "(options: { value: string; }) => Promise<{ value: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ value: string; }"
+          }
+        ],
+        "returns": "Promise<{ value: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "echo"
+      },
+      {
+        "name": "create",
+        "signature": "(options: { accessToken: string; width: number; height: number; x: number; y: number; latitude?: number; longitude?: number; zoom?: number; liteMode?: boolean; }) => Promise<any>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ accessToken: string; width: number; height: number; x: number; y: number; latitude?: number | undefined; longitude?: number | undefined; zoom?: number | undefined; liteMode?: boolean | undefined; }"
+          }
+        ],
+        "returns": "Promise<any>",
+        "tags": [],
+        "docs": "Creates map view and displays it",
+        "complexTypes": [],
+        "slug": "create"
+      },
+      {
+        "name": "close",
+        "signature": "() => Promise<any>",
+        "parameters": [],
+        "returns": "Promise<any>",
+        "tags": [],
+        "docs": "Destroy the mapView, use in ionViewDidLeave and similar",
+        "complexTypes": [],
+        "slug": "close"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": []
+}
