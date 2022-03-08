@@ -20,7 +20,7 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 30
     defaultConfig {
-        minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 21
+      minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 21
         targetSdkVersion project.hasProperty('targetSdkVersion') ? rootProject.ext.targetSdkVersion : 30
         versionCode 1
         versionName "1.0"
@@ -42,15 +42,30 @@ android {
 }
 
 repositories {
+  maven {
+    url 'https://api.mapbox.com/downloads/v2/releases/maven'
+    authentication {
+      basic(BasicAuthentication)
+    }
+    credentials {
+      // Do not change the username below.
+      // This should always be `mapbox` (not your username).
+      username = "mapbox"
+      // Use the secret token you stored in gradle.properties as the password
+      password = rootProject.properties['MAPBOX_DOWNLOADS_TOKEN']
+    }
+  }
     google()
     jcenter()
     mavenCentral()
+
 }
 
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
+    implementation 'com.mapbox.maps:android:10.3.0'
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"

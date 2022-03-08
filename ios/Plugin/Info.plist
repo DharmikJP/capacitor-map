@@ -18,6 +18,8 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>MBXAccessToken</key>
+	<string>pk.eyJ1IjoiZGhhcm1pa3AwNyIsImEiOiJja3NzejF2aXUwOG91Mm9wYzIzNzdycDhzIn0.HIzyLxiDGWH6GQMgldL4AQ</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>
